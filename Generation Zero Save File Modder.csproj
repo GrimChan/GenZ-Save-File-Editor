@@ -133,7 +133,6 @@
     <None Include="Resources\16.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\Debug\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>

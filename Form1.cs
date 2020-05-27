@@ -31,6 +31,7 @@ namespace Generation_Zero_Save_File_Modder
 
         #endregion
 
+
         #region Program Initilization
 
         public Form1()
@@ -90,6 +91,7 @@ namespace Generation_Zero_Save_File_Modder
         }
 
         #endregion
+
 
         #region Weapon Replacer
 
@@ -345,9 +347,8 @@ namespace Generation_Zero_Save_File_Modder
             }
         }
 
-
-
         #endregion
+
 
         #region Skill Editor
 
@@ -459,6 +460,7 @@ namespace Generation_Zero_Save_File_Modder
         }
 
         #endregion
+
 
         #region Attachment Replacer
 
