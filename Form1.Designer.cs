@@ -62,7 +62,7 @@
             this.inventoryAttachmentCombo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.skillTab = new System.Windows.Forms.TabPage();
-            this.devTab = new System.Windows.Forms.TabPage();
+            this.itemTab = new System.Windows.Forms.TabPage();
             this.changeInfo = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -72,8 +72,6 @@
             this.equipmentAmountBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.equipmentHashBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.equipmentIdBox = new System.Windows.Forms.TextBox();
             this.equipmentSelectorCombo = new System.Windows.Forms.ComboBox();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.weaponSwapQuality)).BeginInit();
@@ -91,7 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.inventoryAttachmentQuality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attachmentQuality)).BeginInit();
             this.skillTab.SuspendLayout();
-            this.devTab.SuspendLayout();
+            this.itemTab.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -368,7 +366,7 @@
             this.tabControl1.Controls.Add(this.weaponTab);
             this.tabControl1.Controls.Add(this.attachmentsTab);
             this.tabControl1.Controls.Add(this.skillTab);
-            this.tabControl1.Controls.Add(this.devTab);
+            this.tabControl1.Controls.Add(this.itemTab);
             this.tabControl1.Location = new System.Drawing.Point(12, 15);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -533,24 +531,24 @@
             this.skillTab.Text = "Skill Resetting";
             this.skillTab.UseVisualStyleBackColor = true;
             // 
-            // devTab
+            // itemTab
             // 
-            this.devTab.Controls.Add(this.changeInfo);
-            this.devTab.Controls.Add(this.label11);
-            this.devTab.Controls.Add(this.groupBox1);
-            this.devTab.Controls.Add(this.equipmentSelectorCombo);
-            this.devTab.Location = new System.Drawing.Point(4, 23);
-            this.devTab.Name = "devTab";
-            this.devTab.Size = new System.Drawing.Size(363, 219);
-            this.devTab.TabIndex = 3;
-            this.devTab.Text = "Dev";
-            this.devTab.UseVisualStyleBackColor = true;
+            this.itemTab.Controls.Add(this.changeInfo);
+            this.itemTab.Controls.Add(this.label11);
+            this.itemTab.Controls.Add(this.groupBox1);
+            this.itemTab.Controls.Add(this.equipmentSelectorCombo);
+            this.itemTab.Location = new System.Drawing.Point(4, 23);
+            this.itemTab.Name = "itemTab";
+            this.itemTab.Size = new System.Drawing.Size(363, 219);
+            this.itemTab.TabIndex = 3;
+            this.itemTab.Text = "Items";
+            this.itemTab.UseVisualStyleBackColor = true;
             // 
             // changeInfo
             // 
-            this.changeInfo.Location = new System.Drawing.Point(3, 188);
+            this.changeInfo.Location = new System.Drawing.Point(3, 171);
             this.changeInfo.Name = "changeInfo";
-            this.changeInfo.Size = new System.Drawing.Size(356, 24);
+            this.changeInfo.Size = new System.Drawing.Size(356, 41);
             this.changeInfo.TabIndex = 3;
             this.changeInfo.Text = "Change Info";
             this.changeInfo.UseVisualStyleBackColor = true;
@@ -573,11 +571,9 @@
             this.groupBox1.Controls.Add(this.equipmentAmountBox);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.equipmentHashBox);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.equipmentIdBox);
             this.groupBox1.Location = new System.Drawing.Point(2, 50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(357, 136);
+            this.groupBox1.Size = new System.Drawing.Size(357, 115);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selected Item Info";
@@ -586,7 +582,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 94);
+            this.label10.Location = new System.Drawing.Point(6, 66);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 15);
             this.label10.TabIndex = 7;
@@ -596,7 +592,7 @@
             // equipmentNameBox
             // 
             this.equipmentNameBox.Enabled = false;
-            this.equipmentNameBox.Location = new System.Drawing.Point(6, 112);
+            this.equipmentNameBox.Location = new System.Drawing.Point(6, 84);
             this.equipmentNameBox.Name = "equipmentNameBox";
             this.equipmentNameBox.Size = new System.Drawing.Size(345, 20);
             this.equipmentNameBox.TabIndex = 6;
@@ -605,7 +601,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 74);
+            this.label9.Location = new System.Drawing.Point(6, 42);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 15);
             this.label9.TabIndex = 5;
@@ -614,7 +610,7 @@
             // 
             // equipmentAmountBox
             // 
-            this.equipmentAmountBox.Location = new System.Drawing.Point(66, 72);
+            this.equipmentAmountBox.Location = new System.Drawing.Point(66, 40);
             this.equipmentAmountBox.Name = "equipmentAmountBox";
             this.equipmentAmountBox.Size = new System.Drawing.Size(285, 20);
             this.equipmentAmountBox.TabIndex = 4;
@@ -623,7 +619,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 48);
+            this.label6.Location = new System.Drawing.Point(6, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 15);
             this.label6.TabIndex = 3;
@@ -633,29 +629,10 @@
             // equipmentHashBox
             // 
             this.equipmentHashBox.Enabled = false;
-            this.equipmentHashBox.Location = new System.Drawing.Point(113, 46);
+            this.equipmentHashBox.Location = new System.Drawing.Point(114, 14);
             this.equipmentHashBox.Name = "equipmentHashBox";
-            this.equipmentHashBox.Size = new System.Drawing.Size(238, 20);
+            this.equipmentHashBox.Size = new System.Drawing.Size(237, 20);
             this.equipmentHashBox.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 15);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "ID:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // equipmentIdBox
-            // 
-            this.equipmentIdBox.Enabled = false;
-            this.equipmentIdBox.Location = new System.Drawing.Point(33, 19);
-            this.equipmentIdBox.Name = "equipmentIdBox";
-            this.equipmentIdBox.Size = new System.Drawing.Size(318, 20);
-            this.equipmentIdBox.TabIndex = 0;
             // 
             // equipmentSelectorCombo
             // 
@@ -705,8 +682,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.attachmentQuality)).EndInit();
             this.skillTab.ResumeLayout(false);
             this.skillTab.PerformLayout();
-            this.devTab.ResumeLayout(false);
-            this.devTab.PerformLayout();
+            this.itemTab.ResumeLayout(false);
+            this.itemTab.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -749,14 +726,12 @@
         private System.Windows.Forms.Label savePathLabel2;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.TabPage skillTab;
-        private System.Windows.Forms.TabPage devTab;
+        private System.Windows.Forms.TabPage itemTab;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox equipmentAmountBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox equipmentHashBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox equipmentIdBox;
         private System.Windows.Forms.ComboBox equipmentSelectorCombo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox equipmentNameBox;

@@ -601,7 +601,6 @@ namespace Generation_Zero_Save_File_Modder
 
         private void equipmentSelectorCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            equipmentIdBox.Text = items[equipmentSelectorCombo.SelectedIndex].ID.Remove(items[equipmentSelectorCombo.SelectedIndex].ID.IndexOf('#')).Trim();
             equipmentHashBox.Text = items[equipmentSelectorCombo.SelectedIndex].HASH.Remove(items[equipmentSelectorCombo.SelectedIndex].HASH.IndexOf('#')).Trim();
             equipmentAmountBox.Text = items[equipmentSelectorCombo.SelectedIndex].AMOUNT.Remove(items[equipmentSelectorCombo.SelectedIndex].AMOUNT.IndexOf('#')).Trim();
             equipmentNameBox.Text = items[equipmentSelectorCombo.SelectedIndex].NAME;
@@ -641,6 +640,12 @@ namespace Generation_Zero_Save_File_Modder
             bw.Write(newAmount);
             bw.Flush();
             bw.Close();
+
+            MessageBox.Show(
+                        "Finished Processing The Item Change",
+                        "Finished",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.None);
         }
 
         #endregion
