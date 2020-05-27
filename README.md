@@ -1,9 +1,11 @@
 # Generation Zero Save File Editor
 
--- Prefix --
+## Prefix
+
 Please report bugs in the appropriate tab inside the Github page
 
--- Tutorial Part: Weapons --
+## Tutorial Part: Weapons
+
 1: Run Generation Zero and either write down or screenshot the weapons you wish to replace.
 
 2: Navigate to the downloaded folder and run the "Generation Zero Save File Modder"
@@ -14,7 +16,8 @@ Before clicking Swap make sure to select the savegame you wish to modify.
 When all the fields are filled and the savegame is selected click Swap to modify the savegame.
 You can modify the weapons all before relaunching the game.
 
--- Tutorial Part: Skill Resetter -- 
+## Tutorial Part: Skill Resetter
+
 1: Download [DECA](https://github.com/kk49/deca/releases/tag/v0.2.9)
 
 2: Open DECA and Goto File->Open GenZero File then navigate to your savegame and open it.
@@ -25,7 +28,7 @@ You can modify the weapons all before relaunching the game.
 
 5: Change the values inside the skill editor and click Reset Skills
 
--- Notes --
+## Notes
 
 Saves Folder -- Documents\Avalanche Studios\GenerationZero\Saves\--SomeNumbers--\savegame
 
