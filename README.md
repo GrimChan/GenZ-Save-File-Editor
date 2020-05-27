@@ -30,13 +30,20 @@ You can modify the weapons all before relaunching the game.
 Saves Folder -- Documents\Avalanche Studios\GenerationZero\Saves\--SomeNumbers--\savegame
 
 Thanks to AleNex for this list:
-	-Experimental Klaucke 17 - Has a chance to trigger a small EMP explosion
-	-Experimental AG 4 - Can set machine components on fire due to heated bullets
-	Experimental Pvg 90 - Adds a railgun upgrade that increases muzzle velocity and penetration, allowing you to hit multiple enemies with one shot
-	-Experimental 12G Pump-Action - Features flechette rounds that will explode when armed
-	-Experimental M/46 "Kpist" SMG - Includes an overdrive function that dramatically increases the fire rate
-	-Experimental Grg m/49 - Launches 2 grenades in the same burst
-	-Experimental KVM 59 Machine Gun - Adds a random chance of triggering a chain lightning effect that also damages nearby enemies. 
+	Experimental Klaucke 17 - Has a chance to trigger a small EMP explosion
+	
+	Experimental AG 4 - Can set machine components on fire due to heated bullets
+	
+	Experimental Pvg 90 - Adds a railgun upgrade that increases muzzle velocity and penetration, allowing you to hit multiple 
+enemies with one shot
+
+	Experimental 12G Pump-Action - Features flechette rounds that will explode when armed
+	
+	Experimental M/46 "Kpist" SMG - Includes an overdrive function that dramatically increases the fire rate
+	
+	Experimental Grg m/49 - Launches 2 grenades in the same burst
+	
+	Experimental KVM 59 Machine Gun - Adds a random chance of triggering a chain lightning effect that also damages nearby enemies. 
 		Might also strike the user if standing too close to the target.
 		
 The Vision Modules only have a max quality of 1
