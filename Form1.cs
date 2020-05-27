@@ -41,6 +41,7 @@ namespace Generation_Zero_Save_File_Modder
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             string x = Resource1.WeaponNames;
             string[] y = x.Split('\n');
             foreach (string s in y)
