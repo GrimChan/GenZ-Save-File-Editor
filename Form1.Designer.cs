@@ -46,15 +46,11 @@
             this.resetSkills = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.saveSlotTicker = new System.Windows.Forms.NumericUpDown();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.skillPoints = new System.Windows.Forms.NumericUpDown();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.openFile2 = new System.Windows.Forms.Button();
             this.savePathLabel2 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.weaponTab = new System.Windows.Forms.TabPage();
             this.attachmentsTab = new System.Windows.Forms.TabPage();
@@ -65,6 +61,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.inventoryAttachmentCombo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.weaponSwapQuality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weaponQuality)).BeginInit();
@@ -73,15 +70,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.weaponImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventorySwapQuality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveSlotTicker)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skillPoints)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.weaponTab.SuspendLayout();
             this.attachmentsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryAttachmentQuality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attachmentQuality)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // weaponSwapQuality
@@ -253,9 +249,9 @@
             // 
             // resetSkills
             // 
-            this.resetSkills.Location = new System.Drawing.Point(6, 81);
+            this.resetSkills.Location = new System.Drawing.Point(75, 159);
             this.resetSkills.Name = "resetSkills";
-            this.resetSkills.Size = new System.Drawing.Size(180, 30);
+            this.resetSkills.Size = new System.Drawing.Size(206, 30);
             this.resetSkills.TabIndex = 11;
             this.resetSkills.Text = "Reset Skills";
             this.resetSkills.UseVisualStyleBackColor = true;
@@ -265,7 +261,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 27);
+            this.label3.Location = new System.Drawing.Point(72, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 18);
             this.label3.TabIndex = 13;
@@ -274,7 +270,7 @@
             // saveSlotTicker
             // 
             this.saveSlotTicker.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveSlotTicker.Location = new System.Drawing.Point(144, 27);
+            this.saveSlotTicker.Location = new System.Drawing.Point(239, 66);
             this.saveSlotTicker.Maximum = new decimal(new int[] {
             4,
             0,
@@ -294,26 +290,11 @@
             0,
             0});
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.resetSkills);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.saveSlotTicker);
-            this.groupBox2.Controls.Add(this.skillPoints);
-            this.groupBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(389, 15);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(194, 117);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Skill Resetting";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 55);
+            this.label4.Location = new System.Drawing.Point(72, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 18);
             this.label4.TabIndex = 15;
@@ -322,7 +303,7 @@
             // skillPoints
             // 
             this.skillPoints.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skillPoints.Location = new System.Drawing.Point(127, 55);
+            this.skillPoints.Location = new System.Drawing.Point(222, 94);
             this.skillPoints.Maximum = new decimal(new int[] {
             30,
             0,
@@ -341,7 +322,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 267);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(571, 92);
+            this.groupBox3.Size = new System.Drawing.Size(367, 92);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Saves";
@@ -367,41 +348,11 @@
             this.savePathLabel2.Text = "Txt File Path: ";
             this.savePathLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(389, 138);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(194, 123);
-            this.groupBox4.TabIndex = 17;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Notes";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 30);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Close Me Before Launching \r\nThe Game Again";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(186, 15);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Provides/Resets max of 30 skills";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.weaponTab);
             this.tabControl1.Controls.Add(this.attachmentsTab);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(12, 15);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -552,6 +503,20 @@
             this.label8.Text = "Attachment To Replace";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.resetSkills);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.skillPoints);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.saveSlotTicker);
+            this.tabPage1.Location = new System.Drawing.Point(4, 23);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(363, 219);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Skill Resetting";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // openFileDialog2
             // 
             this.openFileDialog2.FileName = "openFileDialog1";
@@ -562,11 +527,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(594, 368);
+            this.ClientSize = new System.Drawing.Size(393, 368);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -581,13 +544,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.weaponImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventorySwapQuality)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveSlotTicker)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skillPoints)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.weaponTab.ResumeLayout(false);
             this.weaponTab.PerformLayout();
@@ -595,6 +554,8 @@
             this.attachmentsTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryAttachmentQuality)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.attachmentQuality)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -618,13 +579,9 @@
         private System.Windows.Forms.Button resetSkills;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown saveSlotTicker;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown skillPoints;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage weaponTab;
         private System.Windows.Forms.TabPage attachmentsTab;
@@ -638,6 +595,7 @@
         private System.Windows.Forms.Button openFile2;
         private System.Windows.Forms.Label savePathLabel2;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }
 
