@@ -30,6 +30,14 @@ You can modify the weapons all before relaunching the game.
 
 5: Change the values inside the skill editor and click Reset Skills
 
+## Tutorial Part: Item Amount Editor
+
+1: Follow Steps 1-4 of Skill Resetter Tutorial.
+
+2: Change the dropdown to the item you wish to change the count of, then change its amount inside the "amount textbox"
+
+3: Click "Change Info" and you're done
+
 ## Notes
 
 Saves Folder -- Documents\Avalanche Studios\GenerationZero\Saves\--SomeNumbers--\savegame
