@@ -296,39 +296,6 @@ namespace Generation_Zero_Save_File_Modder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to --------header
-        ///version: 4
-        ///instance_count: 1
-        ///instance_offset: 2315088
-        ///typedef_count: 83
-        ///typedef_offset: 2315112
-        ///stringhash_count: 0
-        ///stringhash_offset: 0
-        ///nametable_count: 248
-        ///nametable_offset: 2324864
-        ///total_size: 2328571
-        ///Unknown[0]: 0 0x00000000
-        ///Unknown[1]: 1 0x00000001
-        ///Unknown[2]: 0 0x00000000
-        ///Unknown[3]: 0 0x00000000
-        ///Unknown[4]: 0 0x00000000
-        ///
-        ///--------comment
-        ///savegamedata.adf in  
-        ///
-        ///--------name_table
-        ///name_table	0	SaveGameRoot
-        ///name_table	1	SaveData
-        ///name_table	2	SaveGameData1
-        ///name_table [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string savegame {
-            get {
-                return ResourceManager.GetString("savegame", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 1346744629
         ///3533383872
         ///582843454
@@ -400,13 +367,22 @@ namespace Generation_Zero_Save_File_Modder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Möller PP;3055879776,2800125862,3155991537,1225959613,358135215,None;
-        ///Klaucke 17;1920462793,30913048,317912168,1158656473,1250828800,2290286314;
-        ///.44 Magnus;525713563,3669591716,1539616687,3654146736,4030765418,None;
-        ///12G Pump Action;3522570570,2946942083,400886324,1211181616,2270892881,1883785329;
-        ///Sjöqvist Semi-Auto;1668043928,3944939440,3723204762,1343436027,3777482652,None;
-        ///M/46 Kpist SMG;1438049323,2562218223,471434641,3343263738,1938906168,1734102884;
-        ///HP5;3329358393,1919634899,894785287,764274991,3995651 [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Möller PP
+        ///Klaucke 17
+        ///.44 Magnus
+        ///12G Pump Action
+        ///Sjöqvist Semi-Auto
+        ///M/46 Kpist SMG
+        ///HP5
+        ///Meusser Hunting Rifle
+        ///Älgstudsare Hunting Rifle
+        ///Pansarvärnsgevär 90
+        ///AI-76
+        ///Automatgevär 4
+        ///Automatgevär 5
+        ///Granatgevär m/49
+        ///Kvm 89 Squad Automatic Weapon
+        ///Kvm 59 Machine Gun.
         /// </summary>
         internal static string WeaponNames {
             get {

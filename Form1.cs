@@ -44,8 +44,8 @@ namespace Generation_Zero_Save_File_Modder
             string[] y = x.Split('\n');
             foreach (string s in y)
             {
-                weaponSwapBox.Items.Add(s.Remove(s.IndexOf(';'), s.LastIndexOf(';') - (s.IndexOf(';') - 1)));
-                inventorySwapBox.Items.Add(s.Remove(s.IndexOf(';'), s.LastIndexOf(';') - (s.IndexOf(';') - 1)));
+                weaponSwapBox.Items.Add(s);
+                inventorySwapBox.Items.Add(s);
             }
 
             string z = Resource1.Attachments;

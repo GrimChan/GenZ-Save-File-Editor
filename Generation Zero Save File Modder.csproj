@@ -68,6 +68,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -154,11 +155,10 @@
     <None Include="Resources\2 crown.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Attachments.txt" />
-    <None Include="Resources\savegame.txt" />
+    <None Include="Resources\Attachments.csv" />
     <None Include="Resources\Skills.txt" />
     <None Include="Resources\WeaponNames.txt" />
-    <None Include="Resources\WeaponIDs.txt" />
+    <None Include="Resources\WeaponIDs.csv" />
     <Content Include="Hopstarter-Soft-Scraps-Gear.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,3 +16,4 @@ F:\SaveFileModder\Generation Zero Save File Modder\obj\Debug\Generation Zero Sav
 F:\SaveFileModder\Generation Zero Save File Modder\obj\Debug\Generation Zero Save File Modder.csproj.CoreCompileInputs.cache
 F:\SaveFileModder\Generation Zero Save File Modder\obj\Debug\Generation Zero Save File Modder.exe
 F:\SaveFileModder\Generation Zero Save File Modder\obj\Debug\Generation Zero Save File Modder.pdb
+F:\SaveFileModder\Generation Zero Save File Modder\obj\Debug\Generation Zero Save File Modder.csprojAssemblyReference.cache
