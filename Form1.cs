@@ -15,10 +15,6 @@ namespace Generation_Zero_Save_File_Modder
         public int weaponSwapValue;
         public int inventorySwapValue;
 
-        public int hits = 0;
-        public string skillTerm = "Skills:";
-        public string skillTerm2 = "SkillLevel:";
-
         public int attachmentSwapIndex;
         public int inventoryAttachmentSwapIndex;
         public int attachmentSwapValue;
@@ -369,6 +365,9 @@ namespace Generation_Zero_Save_File_Modder
 
                 int[] arraySize = new int[4];
                 int[] arrayLocation = new int[4];
+
+                int hits = 0;
+                string skillTerm = "Skills:";
 
                 string z = File.ReadAllText(savePathLabel2.Text);
                 string[] w = z.Split('\n');
