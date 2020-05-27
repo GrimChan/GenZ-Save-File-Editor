@@ -303,20 +303,20 @@ namespace Generation_Zero_Save_File_Modder
                         MessageBoxIcon.Warning);
                 }
 
-                int index1;
-                int index2;
+                int weaponIndex;
+                int inventoryIndex;
 
-                index1 = weaponSwapIndex * 7 + weaponSwapValue;
-                index2 = inventorySwapIndex * 7 + inventorySwapValue;
+                weaponIndex = weaponSwapIndex * 7 + weaponSwapValue;
+                inventoryIndex = inventorySwapIndex * 7 + inventorySwapValue;
 
                 string x = Resource1.WeaponIDs;
                 string[] y = x.Split(',', '\n');
 
-                uint hash1 = uint.Parse(y[index1]);
+                uint hash1 = uint.Parse(y[weaponIndex]);
                 string hexString1 = hash1.ToString("X");
                 uint hex1 = uint.Parse(hexString1, System.Globalization.NumberStyles.HexNumber);
 
-                uint hash2 = uint.Parse(y[index2]);
+                uint hash2 = uint.Parse(y[inventoryIndex]);
                 string hexString2 = hash2.ToString("X");
                 uint hex2 = uint.Parse(hexString2, System.Globalization.NumberStyles.HexNumber);
 
@@ -478,20 +478,20 @@ namespace Generation_Zero_Save_File_Modder
                         MessageBoxIcon.Warning);
                 }
 
-                int index1;
-                int index2;
+                int attachmentIndex;
+                int inventoryAttachmentIndex;
 
-                index1 = attachmentSwapIndex * 6 + attachmentSwapValue;
-                index2 = inventoryAttachmentSwapIndex * 6 + inventoryAttachmentSwapValue;
+                attachmentIndex = attachmentSwapIndex * 6 + attachmentSwapValue;
+                inventoryAttachmentIndex = inventoryAttachmentSwapIndex * 6 + inventoryAttachmentSwapValue;
 
                 string x = Resource1.Attachments;
                 string[] y = x.Split(',', '\n');
 
-                uint hash1 = uint.Parse(y[index1]);
+                uint hash1 = uint.Parse(y[attachmentIndex]);
                 string hexString1 = hash1.ToString("X");
                 uint hex1 = uint.Parse(hexString1, System.Globalization.NumberStyles.HexNumber);
 
-                uint hash2 = uint.Parse(y[index2]);
+                uint hash2 = uint.Parse(y[inventoryAttachmentIndex]);
                 string hexString2 = hash2.ToString("X");
                 uint hex2 = uint.Parse(hexString2, System.Globalization.NumberStyles.HexNumber);
 
