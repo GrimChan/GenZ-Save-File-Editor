@@ -61,8 +61,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.inventoryAttachmentCombo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.skillTab = new System.Windows.Forms.TabPage();
+            this.devTab = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.equipmentNameBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.equipmentAmountBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.equipmentHashBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.equipmentIdBox = new System.Windows.Forms.TextBox();
+            this.equipmentSelectorCombo = new System.Windows.Forms.ComboBox();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.changeInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.weaponSwapQuality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weaponQuality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryQuality)).BeginInit();
@@ -77,7 +90,9 @@
             this.attachmentsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryAttachmentQuality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attachmentQuality)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.skillTab.SuspendLayout();
+            this.devTab.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // weaponSwapQuality
@@ -352,7 +367,8 @@
             // 
             this.tabControl1.Controls.Add(this.weaponTab);
             this.tabControl1.Controls.Add(this.attachmentsTab);
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.skillTab);
+            this.tabControl1.Controls.Add(this.devTab);
             this.tabControl1.Location = new System.Drawing.Point(12, 15);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -503,24 +519,154 @@
             this.label8.Text = "Attachment To Replace";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // tabPage1
+            // skillTab
             // 
-            this.tabPage1.Controls.Add(this.resetSkills);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.skillPoints);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.saveSlotTicker);
-            this.tabPage1.Location = new System.Drawing.Point(4, 23);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(363, 219);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Skill Resetting";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.skillTab.Controls.Add(this.resetSkills);
+            this.skillTab.Controls.Add(this.label4);
+            this.skillTab.Controls.Add(this.skillPoints);
+            this.skillTab.Controls.Add(this.label3);
+            this.skillTab.Controls.Add(this.saveSlotTicker);
+            this.skillTab.Location = new System.Drawing.Point(4, 23);
+            this.skillTab.Name = "skillTab";
+            this.skillTab.Size = new System.Drawing.Size(363, 219);
+            this.skillTab.TabIndex = 2;
+            this.skillTab.Text = "Skill Resetting";
+            this.skillTab.UseVisualStyleBackColor = true;
+            // 
+            // devTab
+            // 
+            this.devTab.Controls.Add(this.changeInfo);
+            this.devTab.Controls.Add(this.label11);
+            this.devTab.Controls.Add(this.groupBox1);
+            this.devTab.Controls.Add(this.equipmentSelectorCombo);
+            this.devTab.Location = new System.Drawing.Point(4, 23);
+            this.devTab.Name = "devTab";
+            this.devTab.Size = new System.Drawing.Size(363, 219);
+            this.devTab.TabIndex = 3;
+            this.devTab.Text = "Dev";
+            this.devTab.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(2, 5);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 14);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Item Selector:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.equipmentNameBox);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.equipmentAmountBox);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.equipmentHashBox);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.equipmentIdBox);
+            this.groupBox1.Location = new System.Drawing.Point(2, 50);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(357, 125);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Selected Item Info";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(11, 99);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 15);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Name:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // equipmentNameBox
+            // 
+            this.equipmentNameBox.Location = new System.Drawing.Point(60, 97);
+            this.equipmentNameBox.Name = "equipmentNameBox";
+            this.equipmentNameBox.Size = new System.Drawing.Size(291, 20);
+            this.equipmentNameBox.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(11, 74);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 15);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Amount:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // equipmentAmountBox
+            // 
+            this.equipmentAmountBox.Location = new System.Drawing.Point(71, 72);
+            this.equipmentAmountBox.Name = "equipmentAmountBox";
+            this.equipmentAmountBox.Size = new System.Drawing.Size(280, 20);
+            this.equipmentAmountBox.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(11, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 15);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Equipment Hash:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // equipmentHashBox
+            // 
+            this.equipmentHashBox.Location = new System.Drawing.Point(116, 46);
+            this.equipmentHashBox.Name = "equipmentHashBox";
+            this.equipmentHashBox.Size = new System.Drawing.Size(235, 20);
+            this.equipmentHashBox.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 15);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "ID:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // equipmentIdBox
+            // 
+            this.equipmentIdBox.Location = new System.Drawing.Point(36, 19);
+            this.equipmentIdBox.Name = "equipmentIdBox";
+            this.equipmentIdBox.Size = new System.Drawing.Size(315, 20);
+            this.equipmentIdBox.TabIndex = 0;
+            // 
+            // equipmentSelectorCombo
+            // 
+            this.equipmentSelectorCombo.FormattingEnabled = true;
+            this.equipmentSelectorCombo.Location = new System.Drawing.Point(2, 22);
+            this.equipmentSelectorCombo.Name = "equipmentSelectorCombo";
+            this.equipmentSelectorCombo.Size = new System.Drawing.Size(357, 22);
+            this.equipmentSelectorCombo.TabIndex = 0;
+            this.equipmentSelectorCombo.SelectedIndexChanged += new System.EventHandler(this.equipmentSelectorCombo_SelectedIndexChanged);
             // 
             // openFileDialog2
             // 
             this.openFileDialog2.FileName = "openFileDialog1";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
+            // 
+            // changeInfo
+            // 
+            this.changeInfo.Location = new System.Drawing.Point(3, 181);
+            this.changeInfo.Name = "changeInfo";
+            this.changeInfo.Size = new System.Drawing.Size(356, 31);
+            this.changeInfo.TabIndex = 3;
+            this.changeInfo.Text = "Change Info";
+            this.changeInfo.UseVisualStyleBackColor = true;
+            this.changeInfo.Click += new System.EventHandler(this.changeInfo_Click);
             // 
             // Form1
             // 
@@ -554,8 +700,12 @@
             this.attachmentsTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryAttachmentQuality)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.attachmentQuality)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.skillTab.ResumeLayout(false);
+            this.skillTab.PerformLayout();
+            this.devTab.ResumeLayout(false);
+            this.devTab.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -595,7 +745,20 @@
         private System.Windows.Forms.Button openFile2;
         private System.Windows.Forms.Label savePathLabel2;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage skillTab;
+        private System.Windows.Forms.TabPage devTab;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox equipmentAmountBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox equipmentHashBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox equipmentIdBox;
+        private System.Windows.Forms.ComboBox equipmentSelectorCombo;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox equipmentNameBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button changeInfo;
     }
 }
 

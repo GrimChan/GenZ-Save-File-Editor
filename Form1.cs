@@ -8,6 +8,22 @@ namespace Generation_Zero_Save_File_Modder
 {
     public partial class Form1 : Form
     {
+        public struct Item
+        {
+            public string ID;
+            public string HASH;
+            public string AMOUNT;
+            public string NAME;
+
+            public Item(string id, string hash, string amount, string name) : this()
+            {
+                ID = id;
+                HASH = hash;
+                AMOUNT = amount;
+                NAME = name;
+            }
+        }
+
         #region Variables
 
         public int weaponSwapIndex;
@@ -24,6 +40,9 @@ namespace Generation_Zero_Save_File_Modder
         public int saveFileIndex = 1;
 
         public string saveFileName2;
+        public string saveTxtPath;
+
+        public List<Item> items = new List<Item>();
 
         #endregion
 
@@ -85,6 +104,25 @@ namespace Generation_Zero_Save_File_Modder
         {
             saveFileName2 = openFileDialog2.FileName;
             savePathLabel2.Text = openFileDialog2.FileName;
+            saveTxtPath = File.ReadAllText(savePathLabel2.Text);
+
+            string[] lines = saveTxtPath.Split('\n');
+            for (int i = 0; i < lines.Length; i++)
+            {
+                if (lines[i].Contains("                      ID:"))
+                {
+                    string idLine = lines[i + 1];
+                    string hashLine = lines[i + 3];
+                    string amountLine = lines[i + 5];
+
+                    items.Add(new Item(idLine, hashLine, amountLine, "-Null-"));
+                }
+            }
+
+            foreach (Item item in items)
+            {
+                equipmentSelectorCombo.Items.Add(item.ID.Trim());
+            }
         }
 
         #endregion
@@ -369,8 +407,7 @@ namespace Generation_Zero_Save_File_Modder
                 int hits = 0;
                 string skillTerm = "Skills:";
 
-                string z = File.ReadAllText(savePathLabel2.Text);
-                string[] w = z.Split('\n');
+                string[] w = saveTxtPath.Split('\n');
                 for (int i = 0; i < w.Length; i++)
                 {
                     if (w[i].Contains(skillTerm))
@@ -551,6 +588,44 @@ namespace Generation_Zero_Save_File_Modder
             attachmentSwapValue = decimal.ToInt32(attachmentQuality.Value);
         }
 
+
         #endregion
+
+        #region Dev
+
+        private void equipmentSelectorCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            equipmentIdBox.Text = items[equipmentSelectorCombo.SelectedIndex].ID.Remove(items[equipmentSelectorCombo.SelectedIndex].ID.IndexOf('#')).Trim();
+            equipmentHashBox.Text = items[equipmentSelectorCombo.SelectedIndex].HASH.Remove(items[equipmentSelectorCombo.SelectedIndex].HASH.IndexOf('#')).Trim();
+            equipmentAmountBox.Text = items[equipmentSelectorCombo.SelectedIndex].AMOUNT.Remove(items[equipmentSelectorCombo.SelectedIndex].AMOUNT.IndexOf('#')).Trim();
+            equipmentNameBox.Text = items[equipmentSelectorCombo.SelectedIndex].NAME;
+        }
+
+        private void changeInfo_Click(object sender, EventArgs e)
+        {
+            //Get info of item
+            string trimmedAmount = items[equipmentSelectorCombo.SelectedIndex].AMOUNT.Substring(items[equipmentSelectorCombo.SelectedIndex].AMOUNT.LastIndexOf('(')).Trim('(', '\r', ')');
+            
+            uint hash1 = uint.Parse(items[equipmentSelectorCombo.SelectedIndex].AMOUNT.Remove(items[equipmentSelectorCombo.SelectedIndex].AMOUNT.IndexOf('#')).Trim());
+            string hexString1 = hash1.ToString("X");
+            uint originalAmount = uint.Parse(hexString1, System.Globalization.NumberStyles.HexNumber);
+
+            uint amountLocation = Convert.ToUInt32(trimmedAmount, 16);
+
+            uint hash3 = uint.Parse(equipmentAmountBox.Text);
+            string hexString3 = hash3.ToString("X");
+            uint newAmount = uint.Parse(hexString3, System.Globalization.NumberStyles.HexNumber);
+
+            //Write new items new info to the right address
+            BinaryWriter bw = new BinaryWriter(File.Open(saveFileName, FileMode.Open, FileAccess.ReadWrite));
+            bw.BaseStream.Position = amountLocation;
+            bw.Write(newAmount);
+            bw.Flush();
+            bw.Close();
+        }
+
+        #endregion
+
+
     }
 }
