@@ -296,6 +296,24 @@ namespace Generation_Zero_Save_File_Modder {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1122333116           ///1675447211           ///3599704378           ///3664930277           ///379411119           ///771308939           ///305283670           ///2690565765           ///4140177568           ///1716127143           ///2324315541           ///2191889410           ///1311760495           ///4205739798           ///2848224651           ///1110682342           ///2057493952           ///4217177927           ///1607570266           ///1414304607           ///1534462266           ///2956642606           ///4289341249           ///1017979386           ///2031994665           ///2394050693           ///1486077924           ///2699257751           ///1603432311           ///3088007515           ///3526088082           ///2739150939           ///1538348284           ///4203776870           ///2821703910           ///3317547883           ///250043317   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string itemHashes {
+            get {
+                return ResourceManager.GetString("itemHashes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # char_part_pants_04_a &quot;Denim pants, dark blue&quot;        ///# char_part_hat_01_e &quot;Knit cap, dark green&quot;        ///# char_part_pants_09_c &quot;Short pleated skirt, blue/purple&quot;        ///# char_part_jacket_05_f &quot;Hip-hop jacket, green/white&quot;        ///# char_part_face_01_e &quot;Hoops, red&quot;        ///# char_part_shoes_01_e &quot;High top sneakers, light blue&quot;        ///# char_part_glasses_02_a &quot;Performance shades, gold&quot;        ///# char_part_shoes_02_h &quot;Leather shoes, purple&quot;        ///# char_part_jacket_02_a &quot;Windbreaker jacket, light blue&quot;        ///# char_part_hair_09_d &quot;Slicked back, bleach blond&quot;        ///# char_part [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string itemNames {
+            get {
+                return ResourceManager.GetString("itemNames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1346744629
         ///3533383872
         ///582843454
@@ -358,7 +376,7 @@ namespace Generation_Zero_Save_File_Modder {
         ///12G Pump Action,3522570570,2946942083,400886324,1211181616,2270892881,1883785329
         ///Sjöqvist Semi-Auto,1668043928,3944939440,3723204762,1343436027,3777482652,None
         ///M/46 Kpist SMG,1438049323,2562218223,471434641,3343263738,1938906168,1734102884
-        ///HP5,3329358393,1919634899,894785287,764274991,3995651919,No [rest of string was truncated]&quot;;.
+        ///HP5,3329358393,1919634899,894785287,764274991,3995651 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string WeaponIDs {
             get {

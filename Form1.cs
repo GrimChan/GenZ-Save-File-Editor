@@ -8,6 +8,8 @@ namespace Generation_Zero_Save_File_Modder
 {
     public partial class Form1 : Form
     {
+        #region Structs
+
         public struct Item
         {
             public string ID;
@@ -23,6 +25,9 @@ namespace Generation_Zero_Save_File_Modder
                 NAME = name;
             }
         }
+
+        #endregion
+
 
         #region Variables
 
@@ -591,6 +596,7 @@ namespace Generation_Zero_Save_File_Modder
 
         #endregion
 
+
         #region Dev
 
         private void equipmentSelectorCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -599,6 +605,19 @@ namespace Generation_Zero_Save_File_Modder
             equipmentHashBox.Text = items[equipmentSelectorCombo.SelectedIndex].HASH.Remove(items[equipmentSelectorCombo.SelectedIndex].HASH.IndexOf('#')).Trim();
             equipmentAmountBox.Text = items[equipmentSelectorCombo.SelectedIndex].AMOUNT.Remove(items[equipmentSelectorCombo.SelectedIndex].AMOUNT.IndexOf('#')).Trim();
             equipmentNameBox.Text = items[equipmentSelectorCombo.SelectedIndex].NAME;
+
+            string x = Resource1.itemHashes;
+            string[] y = x.Split('\r');
+            string z = Resource1.itemNames;
+            string[] c = z.Split('\r');
+            for (int i = 0; i < y.Length; i++)
+            {
+                if (y[i].Contains(items[equipmentSelectorCombo.SelectedIndex].HASH.Remove(items[equipmentSelectorCombo.SelectedIndex].HASH.IndexOf('#')).Trim()))
+                {
+                    string name = c[i];
+                    equipmentNameBox.Text = name;
+                }
+            }
         }
 
         private void changeInfo_Click(object sender, EventArgs e)

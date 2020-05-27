@@ -157,6 +157,8 @@
     <None Include="Resources\2 crown.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\itemHashes.txt" />
+    <None Include="Resources\itemNames.txt" />
     <None Include="Resources\Attachments.csv" />
     <None Include="Resources\Skills.txt" />
     <None Include="Resources\WeaponNames.txt" />

@@ -63,6 +63,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.skillTab = new System.Windows.Forms.TabPage();
             this.devTab = new System.Windows.Forms.TabPage();
+            this.changeInfo = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -75,7 +76,6 @@
             this.equipmentIdBox = new System.Windows.Forms.TextBox();
             this.equipmentSelectorCombo = new System.Windows.Forms.ComboBox();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.changeInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.weaponSwapQuality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weaponQuality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryQuality)).BeginInit();
@@ -546,6 +546,16 @@
             this.devTab.Text = "Dev";
             this.devTab.UseVisualStyleBackColor = true;
             // 
+            // changeInfo
+            // 
+            this.changeInfo.Location = new System.Drawing.Point(3, 188);
+            this.changeInfo.Name = "changeInfo";
+            this.changeInfo.Size = new System.Drawing.Size(356, 24);
+            this.changeInfo.TabIndex = 3;
+            this.changeInfo.Text = "Change Info";
+            this.changeInfo.UseVisualStyleBackColor = true;
+            this.changeInfo.Click += new System.EventHandler(this.changeInfo_Click);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -567,7 +577,7 @@
             this.groupBox1.Controls.Add(this.equipmentIdBox);
             this.groupBox1.Location = new System.Drawing.Point(2, 50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(357, 125);
+            this.groupBox1.Size = new System.Drawing.Size(357, 136);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selected Item Info";
@@ -576,7 +586,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(11, 99);
+            this.label10.Location = new System.Drawing.Point(6, 94);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 15);
             this.label10.TabIndex = 7;
@@ -585,16 +595,17 @@
             // 
             // equipmentNameBox
             // 
-            this.equipmentNameBox.Location = new System.Drawing.Point(60, 97);
+            this.equipmentNameBox.Enabled = false;
+            this.equipmentNameBox.Location = new System.Drawing.Point(6, 112);
             this.equipmentNameBox.Name = "equipmentNameBox";
-            this.equipmentNameBox.Size = new System.Drawing.Size(291, 20);
+            this.equipmentNameBox.Size = new System.Drawing.Size(345, 20);
             this.equipmentNameBox.TabIndex = 6;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(11, 74);
+            this.label9.Location = new System.Drawing.Point(6, 74);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 15);
             this.label9.TabIndex = 5;
@@ -603,16 +614,16 @@
             // 
             // equipmentAmountBox
             // 
-            this.equipmentAmountBox.Location = new System.Drawing.Point(71, 72);
+            this.equipmentAmountBox.Location = new System.Drawing.Point(66, 72);
             this.equipmentAmountBox.Name = "equipmentAmountBox";
-            this.equipmentAmountBox.Size = new System.Drawing.Size(280, 20);
+            this.equipmentAmountBox.Size = new System.Drawing.Size(285, 20);
             this.equipmentAmountBox.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 48);
+            this.label6.Location = new System.Drawing.Point(6, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 15);
             this.label6.TabIndex = 3;
@@ -621,16 +632,17 @@
             // 
             // equipmentHashBox
             // 
-            this.equipmentHashBox.Location = new System.Drawing.Point(116, 46);
+            this.equipmentHashBox.Enabled = false;
+            this.equipmentHashBox.Location = new System.Drawing.Point(113, 46);
             this.equipmentHashBox.Name = "equipmentHashBox";
-            this.equipmentHashBox.Size = new System.Drawing.Size(235, 20);
+            this.equipmentHashBox.Size = new System.Drawing.Size(238, 20);
             this.equipmentHashBox.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 22);
+            this.label5.Location = new System.Drawing.Point(6, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 15);
             this.label5.TabIndex = 1;
@@ -639,9 +651,10 @@
             // 
             // equipmentIdBox
             // 
-            this.equipmentIdBox.Location = new System.Drawing.Point(36, 19);
+            this.equipmentIdBox.Enabled = false;
+            this.equipmentIdBox.Location = new System.Drawing.Point(33, 19);
             this.equipmentIdBox.Name = "equipmentIdBox";
-            this.equipmentIdBox.Size = new System.Drawing.Size(315, 20);
+            this.equipmentIdBox.Size = new System.Drawing.Size(318, 20);
             this.equipmentIdBox.TabIndex = 0;
             // 
             // equipmentSelectorCombo
@@ -657,16 +670,6 @@
             // 
             this.openFileDialog2.FileName = "openFileDialog1";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
-            // 
-            // changeInfo
-            // 
-            this.changeInfo.Location = new System.Drawing.Point(3, 181);
-            this.changeInfo.Name = "changeInfo";
-            this.changeInfo.Size = new System.Drawing.Size(356, 31);
-            this.changeInfo.TabIndex = 3;
-            this.changeInfo.Text = "Change Info";
-            this.changeInfo.UseVisualStyleBackColor = true;
-            this.changeInfo.Click += new System.EventHandler(this.changeInfo_Click);
             // 
             // Form1
             // 

@@ -121,6 +121,12 @@
   <data name="Attachments" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Attachments.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="itemHashes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\itemHashes.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="itemNames" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\itemNames.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="Skills" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Skills.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
