@@ -597,7 +597,7 @@ namespace Generation_Zero_Save_File_Modder
         #endregion
 
 
-        #region Dev
+        #region Item Editor
 
         private void equipmentSelectorCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -649,7 +649,5 @@ namespace Generation_Zero_Save_File_Modder
         }
 
         #endregion
-
-
     }
 }
