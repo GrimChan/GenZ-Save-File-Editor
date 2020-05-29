@@ -2,8 +2,6 @@
 
 ## Prefix
 
-[Roadmap](https://trello.com/b/YM8D5dLJ/generation-zero-sfm)
-
 Please report bugs in the appropriate tab inside the Github page
 
 ## Tutorial Part: Weapons
