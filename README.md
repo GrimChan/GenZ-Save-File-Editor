@@ -2,8 +2,6 @@
 
 ## Prefix
 
-[Roadmap](https://trello.com/b/YM8D5dLJ/generation-zero-sfm)
-
 Please report bugs in the appropriate tab inside the Github page
 
 ## Tutorial Part: Weapons
@@ -29,6 +27,14 @@ You can modify the weapons all before relaunching the game.
 4: In the Skill Editor click the bottom Open File and navigate to the extracted txt.
 
 5: Change the values inside the skill editor and click Reset Skills
+
+## Tutorial Part: Item Amount Editor
+
+1: Follow Steps 1-4 of Skill Resetter Tutorial.
+
+2: Change the dropdown to the item you wish to change the count of, then change its amount inside the "amount textbox"
+
+3: Click "Change Info" and you're done
 
 ## Notes
 
