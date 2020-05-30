@@ -16,13 +16,15 @@ namespace Generation_Zero_Save_File_Modder
             public string HASH;
             public string AMOUNT;
             public string NAME;
+            public string CHILDEQUIPMENTCOUNT;
 
-            public Item(string id, string hash, string amount, string name) : this()
+            public Item(string id, string hash, string amount, string name, string childEquipmentCount) : this()
             {
                 ID = id;
                 HASH = hash;
                 AMOUNT = amount;
                 NAME = name;
+                CHILDEQUIPMENTCOUNT = childEquipmentCount;
             }
         }
 
@@ -119,14 +121,15 @@ namespace Generation_Zero_Save_File_Modder
                     string idLine = lines[i + 1];
                     string hashLine = lines[i + 3];
                     string amountLine = lines[i + 5];
+                    string childLine = lines[i + 7];
 
-                    items.Add(new Item(idLine, hashLine, amountLine, "-Null-"));
+                    items.Add(new Item(idLine, hashLine, amountLine, "-Null-", childLine));
                 }
             }
 
             foreach (Item item in items)
             {
-                equipmentSelectorCombo.Items.Add(item.ID.Trim());
+                itemSelectorCombo.Items.Add(item.ID.Trim());
             }
         }
 
@@ -601,9 +604,9 @@ namespace Generation_Zero_Save_File_Modder
 
         private void equipmentSelectorCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            equipmentHashBox.Text = items[equipmentSelectorCombo.SelectedIndex].HASH.Remove(items[equipmentSelectorCombo.SelectedIndex].HASH.IndexOf('#')).Trim();
-            equipmentAmountBox.Text = items[equipmentSelectorCombo.SelectedIndex].AMOUNT.Remove(items[equipmentSelectorCombo.SelectedIndex].AMOUNT.IndexOf('#')).Trim();
-            equipmentNameBox.Text = items[equipmentSelectorCombo.SelectedIndex].NAME;
+            equipmentHashBox.Text = items[itemSelectorCombo.SelectedIndex].HASH.Remove(items[itemSelectorCombo.SelectedIndex].HASH.IndexOf('#')).Trim();
+            equipmentAmountBox.Text = items[itemSelectorCombo.SelectedIndex].AMOUNT.Remove(items[itemSelectorCombo.SelectedIndex].AMOUNT.IndexOf('#')).Trim();
+            equipmentNameBox.Text = items[itemSelectorCombo.SelectedIndex].NAME;
 
             string x = Resource1.itemHashes;
             string[] y = x.Split('\r');
@@ -611,7 +614,7 @@ namespace Generation_Zero_Save_File_Modder
             string[] c = z.Split('\r');
             for (int i = 0; i < y.Length; i++)
             {
-                if (y[i].Contains(items[equipmentSelectorCombo.SelectedIndex].HASH.Remove(items[equipmentSelectorCombo.SelectedIndex].HASH.IndexOf('#')).Trim()))
+                if (y[i].Contains(items[itemSelectorCombo.SelectedIndex].HASH.Remove(items[itemSelectorCombo.SelectedIndex].HASH.IndexOf('#')).Trim()))
                 {
                     string name = c[i];
                     equipmentNameBox.Text = name;
@@ -622,22 +625,26 @@ namespace Generation_Zero_Save_File_Modder
         private void changeInfo_Click(object sender, EventArgs e)
         {
             //Get info of item
-            string trimmedAmount = items[equipmentSelectorCombo.SelectedIndex].AMOUNT.Substring(items[equipmentSelectorCombo.SelectedIndex].AMOUNT.LastIndexOf('(')).Trim('(', '\r', ')');
-            
-            uint hash1 = uint.Parse(items[equipmentSelectorCombo.SelectedIndex].AMOUNT.Remove(items[equipmentSelectorCombo.SelectedIndex].AMOUNT.IndexOf('#')).Trim());
-            string hexString1 = hash1.ToString("X");
-            uint originalAmount = uint.Parse(hexString1, System.Globalization.NumberStyles.HexNumber);
+            string trimmedAmount = items[itemSelectorCombo.SelectedIndex].AMOUNT.Substring(items[itemSelectorCombo.SelectedIndex].AMOUNT.LastIndexOf('(')).Trim('(', '\r', ')');
+            string trimmedHash = items[itemSelectorCombo.SelectedIndex].HASH.Substring(items[itemSelectorCombo.SelectedIndex].HASH.LastIndexOf('(')).Trim('(', '\r', ')');
 
             uint amountLocation = Convert.ToUInt32(trimmedAmount, 16);
+            uint hashLocation = Convert.ToUInt32(trimmedHash, 16);
 
-            uint hash3 = uint.Parse(equipmentAmountBox.Text);
-            string hexString3 = hash3.ToString("X");
-            uint newAmount = uint.Parse(hexString3, System.Globalization.NumberStyles.HexNumber);
+            uint hash1 = uint.Parse(equipmentAmountBox.Text);
+            string hexString1 = hash1.ToString("X");
+            uint newAmount = uint.Parse(hexString1, System.Globalization.NumberStyles.HexNumber);
+
+            uint hash2 = uint.Parse(equipmentHashBox.Text);
+            string hexString2 = hash2.ToString("X");
+            uint newHash = uint.Parse(hexString2, System.Globalization.NumberStyles.HexNumber);
 
             //Write new items new info to the right address
             BinaryWriter bw = new BinaryWriter(File.Open(saveFileName, FileMode.Open, FileAccess.ReadWrite));
             bw.BaseStream.Position = amountLocation;
             bw.Write(newAmount);
+            bw.BaseStream.Position = hashLocation;
+            bw.Write(newHash);
             bw.Flush();
             bw.Close();
 
@@ -647,7 +654,6 @@ namespace Generation_Zero_Save_File_Modder
                         MessageBoxButtons.OK,
                         MessageBoxIcon.None);
         }
-
         #endregion
     }
 }
